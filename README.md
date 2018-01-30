@@ -1,2 +1,2 @@
 # Python
-学习Python记录
+Python学习记录
