@@ -46,6 +46,7 @@ print(a)
 a.pop(0)
 a.pop()
 a.insert(0,9)
+print(a)
 
 b = ['wjw1340',22,'WUST'] #数组
 
