@@ -43,10 +43,14 @@ person('Bob', 35, city='Beijing')
 extra = {'city': 'Beijing', 'job': 'Engineer'}
 person('Jack', 24, **extra)
 
-def ch(*x):
+def product(*x):
     sum = 1;
     for i in x:
         sum *= i
-    print(sum)
+    return sum
 
-
+def move(n,A,B,C):
+    if(n == 0):return
+    move(n-1,A,C,B)
+    print('%s -> %s' %(A,C))
+    move(n-1,B,A,C)
