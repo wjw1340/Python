@@ -29,7 +29,7 @@ else:
 
 # 循环  内含(while break continue)
 names = ['Michael', 'Bob', 'Tracy']
-for name in names:
+for name in names:        #直接取值，没有下标 从头开始取两个数in name[0:2]
     print('hello',name)
 
 

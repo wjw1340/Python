@@ -38,5 +38,28 @@ elif trim('    ') != '':
     print('测试失败6!')
 else:
     print('测试成功!')
+	
+L = ['Hello', 'World', 18, 'Apple', None]
+L2 =[s.lower() for s in L if isinstance(s, str)] 
 
+print(L2)
+if L2 == ['hello', 'world', 'apple']:
+    print('测试通过!')
+else:
+    print('测试失败!')
+
+def tr():
+   a = [1]
+   while 1:
+       yield a
+       a = [ a[i]+a[i+1] for i in range(len(a)-1) ]
+       a.append(1)
+       a.insert(0,1)
+
+n = 1
+for x in tr():
+    print(x)
+    n += 1
+    if n == 10:
+        break
 
