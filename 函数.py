@@ -65,5 +65,17 @@ print( reduce(ad,[1,-2,3,4]) )
 
 def isodd(x):
     return x%2 == 1             #filter过滤掉不符合条件的
-print( list( filter(isodd,[1,2,3,4]) ) )  
+print( list( filter(isodd,[1,2,3,4]) ) )
 
+q = sorted([36, 5, -12, 9, -21], key=abs,reverse = 1)   #按key自定义排序
+print(q)                                                #reverse反向排序
+
+print( list(map(lambda x: x * x, [1,2,3])) )#匿名函数lambda x: x * x相当于以下
+def f(x):
+    return x * x
+
+# 偏函数
+print( int('10',2) )  #‘10’为二进制数，转为10进制
+import functools
+int2 = functools.partial(int, base=2)#把函数的某些参数固定（设置默认值)
+print( int2('1000000') )

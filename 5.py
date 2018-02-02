@@ -23,7 +23,8 @@ def prime():
     while 1:
         n = next(it)
         yield n
-        it = filter(iss(n),it)
+        it = filter(lambda x: x % n > 0,it)
+        #it = filter(iss(n),it)
 
 for n in prime():
     if n < 1000:
@@ -64,6 +65,18 @@ for n in pa():
         print(n)
     else:
         break
-    
+##########################
+L = [('Bob', 75), ('Adam', 92), ('Bart', 66), ('Lisa', 88)]
+def by_name(t):
+    return t[0].lower()
+L2 = sorted(L, key=by_name)
+print(L2)
 
 
+def by_score(t):
+    return -t[1]
+L2 = sorted(L, key=by_score)
+print(L2)
+
+L = list(filter(lambda x:x%2==1, range(1, 20)))
+print(L)
