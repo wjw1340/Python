@@ -49,4 +49,21 @@ def ch(*x):
         sum *= i
     print(sum)
 
+# 高阶函数
+def add(x, y, f):               #f为函数名
+    return f(x) + f(y)
+print( add(5,-5,abs) )
+
+def f(x):                       #map(映射)
+    return x*x
+print( list( map(f,[1,2,3,4]) ) )
+
+from functools import reduce    #reduce,[]接收两个以上，把结果继续和序列的下一个
+def ad(x,y):                    #元素做累积计算
+    return x+y
+print( reduce(ad,[1,-2,3,4]) )
+
+def isodd(x):
+    return x%2 == 1             #filter过滤掉不符合条件的
+print( list( filter(isodd,[1,2,3,4]) ) )  
 
