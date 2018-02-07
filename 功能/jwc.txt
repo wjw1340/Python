@@ -1,0 +1,566 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=GBK" >
+	<meta http-equiv="Content-Language" content="zh-CN" >
+	<meta http-equiv="X-UA-Compatible" content="IE=8" >
+	<meta content="robots" name="index, follow" >
+	<meta content="googlebot" name="index, follow" >
+	<meta name="author" content="正方软件" >
+	<meta name="Copyright" content="正方软件" >
+	<meta name="description" content="武汉科技大学教务处" >
+	<meta http-equiv="P3P" content='CP="CAO PSA OUR"' >
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<title>教务处</title>
+	<link rel="stylesheet" id="cssLink" href="http://202.114.242.231:8036/style/default.css" type="text/css" media="all"  />
+	<script language="javascript" src="http://202.114.242.231:8036/dwr/util.js"></script>
+	<script language="javascript" src="http://202.114.242.231:8036/dwr/engine.js"></script>
+	<script type="text/javascript" src="http://202.114.242.231:8036/js/commanFunction.js"></script>
+	<script type="text/javascript" src="http://202.114.242.231:8036/js/comman.js"></script>
+<script type="text/javascript">
+	<!-- js得到参数   -->
+	function querystring(strName){
+		var strHref =location.href;
+		var intPos = strHref.indexOf("?");
+		var strRight = strHref.substr(intPos + 1);
+		var arrTmp = strRight.split("&");
+			 for(var i = 0; i < arrTmp.length; i++){
+		var arrTemp = arrTmp[i].split("=");
+		if(arrTemp[0].toUpperCase() == strName.toUpperCase()) return arrTemp[1];}
+		return "";}
+		</script>
+	</head>
+	<body>
+	<div id="container" class="body_main">
+	<div id="134257602805285228" class="topframe">
+	<div id="134259456933386175" class="topframe_1">
+	<div id="134260088988095715" class="flashControl_134260088988095715" >
+<h3><span>flash<span></h3>
+<div class="con"><embed  pluginspage="http://www.macromedia.com/go/getflashplayer" src="http://202.114.242.231:8036/flashes/fl(1).swf" type="" height="90" width="970" wmode="transparent" quality=""/>
+</div>
+</div></div>
+	<div id="134259456933379841" class="topframe_2">
+	<div id="134259479016119605" class="WebsiteSearch_134259479016119605" >
+<h3><span>站点搜索</span><a href=""></a></h3><dl>
+
+<dt>
+
+
+<span class="gjz"><label>请输入关键字</label><input onkeydown="if(event.keyCode == 13)searchnews()" type="text" name="query" id="query" value="" size="50%"></span> <span class="lanm"><label>栏目</label><select id="lmdm">
+<option value="">全部</option>
+</select></span></dt>
+<dd><button id="search" onclick="searchnews()">搜索</button>
+</dd>
+<input type="hidden" id="RsCount" value=""/>
+</dl>
+<script type="text/javascript">
+window.onload=new function(){
+var ele = document.getElementById("lmdm");var xmlDoc = loadConfigXml("http://202.114.242.231:8036/xml/newstype_005801.xml");
+var i = 0;
+var allele = "";
+var allnode = xmlDoc.selectNodes("list/lmlist");
+var text="";var value="";
+for(i=0;i<allnode.length;i++) {
+if(typeof window.ActiveXObject != 'undefined'){
+text = allnode[i].selectSingleNode("lmmc").text;
+value = allnode[i].selectSingleNode("lmdm").text;
+}else{
+text = allnode[i].selectSingleNode("lmmc/text()").nodeValue;
+value = allnode[i].selectSingleNode("lmdm/text()").nodeValue;
+}if(text != "") {
+ele.options[ele.options.length] = new Option(text , value);
+allele += value +",";
+}
+}
+allele = KillCharValue(allele,',');
+ele.options[0].value = allele;
+}
+function searchnews() {
+if(document.getElementById("query").value != "" || document.getElementById("lmdm").value != "") {
+window.open("http://202.114.242.231:8036/search.html?query="+escape(escape(document.getElementById("query").value))+"&lmdm="+escape(escape(document.getElementById("lmdm").value)));
+} else {
+return false;
+}
+}
+</script>
+</div></div>
+	<div id="134260016178650293" class="topframe_3">
+	<div id="134259482792774985" class="navigation_134259482792774985" >
+<h3 class="title"><span>
+</span></h3>
+<ul class="nav" id="nav_134259482792774985">
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036//default.html" target="_self">
+<span>教务首页</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580102.html" target="_self">
+<span>机构设置</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580103.html" target="_self">
+<span>教学研究</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580104.html" target="_self">
+<span>教务管理</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580105.html" target="_self">
+<span>学籍管理</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580106.html" target="_self">
+<span>实践教学</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.230:8046/default.html" target="_blank">
+<span>质量监控</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580108.html" target="_self">
+<span>教材管理</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036//type/0058010901.html" target="_self">
+<span>管理文件</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://202.114.242.231:8036/type/00580110.html" target="_self">
+<span>下载专区</span></a>
+</li>
+<li class ="" onmouseover="chgCode_134259482792774985(this)" onMouseOut="chgCode_134259482792774985(this)">
+<a class="topname"  href="http://www.wust.edu.cn/" target="_blank">
+<span>学校主页</span></a>
+</li>
+</ul>
+<script type="text/javascript">
+function chgCode_134259482792774985(obj) {
+if (obj.className != "current") {
+var root=document.getElementById("nav_134259482792774985");
+for(var i=0;i<root.childNodes.length;i++){
+root.childNodes[i].className ="";
+}
+obj.className = "current"
+}
+}
+</script>
+</div></div>
+	</div>
+	<div id="134257602805283138" class="mainframe">
+	<div id="134259463600516626" class="mainframe_1">
+	<div id="134259463905249299" class="mainframe_1_1">
+	<div id="134259493381733231" class="picurlportlet_134259493381733231" >
+<h3><span>教师专区</span></h3><ul> 
+<div id="showpages_134259493381733231" >
+</div>
+<div id="showimags_134259493381733231" >
+</div>
+<li><a id="134259512419211284" djsl="126203" onclick="openlink(this)" href="http://jwxt.wust.edu.cn/whkjdx/" target="_blank">	<img  height="37px" width="215px" src="http://202.114.242.231:8036//images/136679421366354834.gif" alt="null"/></a></li>
+<li><a id="134259526000529317" djsl="1" onclick="openlink(this)" href="/type/0058011401.html" target="_blank">	<img  height="37px" width="215px" src="http://202.114.242.231:8036//images/134259525997380238.gif" alt="null"/></a></li>
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><script type="text/javascript">function openlink(obj){
+dropNumAjax.urlDropNum(obj.id,obj.djsl);
+}
+</script>
+<script type="text/javascript">
+function showFwpl_134259493381733231(obj){
+var url = "fwplb.jsp?FwId="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+<script type="text/javascript">
+function showFwjs_134259493381733231(obj){
+var url = "yzs/fwjs.action?id="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+</ul></div></div>
+	<div id="134259463905225217" class="mainframe_1_2">
+	<div id="134259528458315464" class="picurlportlet_134259528458315464" >
+<h3><span>学生专区</span></h3><ul> 
+<div id="showpages_134259528458315464" >
+</div>
+<div id="showimags_134259528458315464" >
+</div>
+<li><a id="134259538123980456" djsl="129650" onclick="openlink(this)" href="http://jwxt.wust.edu.cn/whkjdx/" target="_blank">	<img  height="36px" width="215px" src="http://202.114.242.231:8036//images/136679425550632314.gif" alt="null"/></a></li>
+<li><a id="134259541416176328" djsl="3771" onclick="openlink(this)" href="/type/0058011401.html" target="_blank">	<img  height="36px" width="215px" src="http://202.114.242.231:8036//images/134259541414516667.gif" alt="null"/></a></li>
+<li><a id="134259547589524759" djsl="5294" onclick="openlink(this)" href="http://www.chsi.com.cn/" target="_blank">	<img  height="36px" width="215px" src="http://202.114.242.231:8036//images/134259547588069057.gif" alt="null"/></a></li>
+<li><a id="134259561848999506" djsl="10044" onclick="openlink(this)" href="http://www.cet.edu.cn/" target="_blank">	<img  height="36px" width="215px" src="http://202.114.242.231:8036//images/137144245917218882.gif" alt="null"/></a></li>
+<li><a id="134259567659816541" djsl="7680" onclick="openlink(this)" href="http://119.97.236.29/NCRE_EMS/studentlogin.aspx" target="_blank">	<img  height="36px" width="215px" src="http://202.114.242.231:8036//images/137057052327982665.gif" alt="null"/></a></li>
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><script type="text/javascript">function openlink(obj){
+dropNumAjax.urlDropNum(obj.id,obj.djsl);
+}
+</script>
+<script type="text/javascript">
+function showFwpl_134259528458315464(obj){
+var url = "fwplb.jsp?FwId="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+<script type="text/javascript">
+function showFwjs_134259528458315464(obj){
+var url = "yzs/fwjs.action?id="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+</ul></div></div>
+	<div id="134259464155259470" class="mainframe_1_3">
+	<div id="134259576823959088" class="picurlportlet_134259576823959088" >
+<h3><span>公共信息</span></h3><ul> 
+<div id="showpages_134259576823959088" >
+</div>
+<div id="showimags_134259576823959088" >
+</div>
+<li><a id="134259583922347363" djsl="1" onclick="openlink(this)" href="http://202.114.242.231:8036/news/151365319257611168.html" target="_blank">	<img  height="33px" width="215px" src="http://202.114.242.231:8036//images/134259583919228904.gif" alt="null"/></a></li>
+<li><a id="134259603603657434" djsl="926" onclick="openlink(this)" href="http://202.114.242.231:8036/type/00580102.html" target="_blank">	<img  height="33px" width="215px" src="http://202.114.242.231:8036//images/134259603602029946.gif" alt="null"/></a></li>
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><script type="text/javascript">function openlink(obj){
+dropNumAjax.urlDropNum(obj.id,obj.djsl);
+}
+</script>
+<script type="text/javascript">
+function showFwpl_134259576823959088(obj){
+var url = "fwplb.jsp?FwId="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+<script type="text/javascript">
+function showFwjs_134259576823959088(obj){
+var url = "yzs/fwjs.action?id="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+</ul></div></div>
+	<div id="134259464392730929" class="mainframe_1_4">
+	<div id="134259609734819335" class="compTabControl_134259609734819335" >
+<h2><span>友情链接</span></h2><!--复合标签控件开始-->
+<!--html部分开始-->
+<div class="comp_title">
+<ul id="tags134259609734819335">
+<li id="tag134259620633364054" class="ha" ><a class="hc" onmouseover="tag134259609734819335(this.parentNode)">==兄弟院校教务网==</a></li>
+<li id="tag134259620628698465" ><a onmouseover="tag134259609734819335(this.parentNode)">==主管部门==</a></li>
+<li id="tag134259620633373482" ><a onmouseover="tag134259609734819335(this.parentNode)">==校内链接==</a></li>
+</ul>
+</div>
+<div id="contag134259620633364054" class="sw"><div id="134259615823970348" class="urlportlet_134259615823970348" >
+<h3><span>==兄弟院校教务网==</span></h3><script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><select onchange="openlink_select(this)"><option  id="134259616617777463" djsl="1" value="#">==兄弟院校教务网==</option>
+<option  id="137446728303520458" djsl="189" value="dean.whu.edu.cn">武汉大学教务部</option>
+<option  id="137446731239439172" djsl="137" value="jwc.hust.edu.cn">华中科技大学教务处</option>
+<option  id="137446754683132337" djsl="67" value="http://jwc.whut.edu.cn/">武汉理工大学教务处</option>
+<option  id="137446757374158920" djsl="25" value="http://jwc.hzau.edu.cn/">华中农业大学教务处</option>
+<option  id="137446759960523581" djsl="15" value="http://jwc.cug.edu.cn/">中国地质大学教务处</option>
+<option  id="137446765269270361" djsl="8" value="http://jwc.ccnu.edu.cn/">华中师范大学教务处</option>
+<option  id="137446769370545550" djsl="4" value="http://jwc.znufe.edu.cn/">中南财经政法大学教务处</option>
+<option  id="137446772300152879" djsl="28" value="http://jwc.hubu.edu.cn">湖北大学教务处</option>
+<option  id="137446777972395848" djsl="9" value="http://dean.hbut.edu.cn/">湖北工业大学教务处</option>
+<option  id="137446780015946134" djsl="20" value="http://jwc.wit.edu.cn">武汉工程大学教务处</option>
+<option  id="137446787717667613" djsl="6" value="http://jwc.wtu.edu.cn/">武汉纺织大学教务处</option>
+</select>
+<script>
+function openlink_select(obj){
+if(obj.value!="")
+{dropNumAjax.urlDropNum(obj.options[obj.selectedIndex].id,obj.options[obj.selectedIndex].djsl);
+window.open(obj.options[obj.selectedIndex].value);
+obj.selectedIndex=0;}
+}
+</script>
+</div></div>
+<div id="contag134259620628698465" class="hd" ><div id="134259612358333154" class="urlportlet_134259612358333154" >
+<h3><span>==主管部门==</span></h3><script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><select onchange="openlink_select(this)"><option  id="134259613589533797" djsl="1" value="#">==主管部门==</option>
+<option  id="136910916074460032" djsl="204" value="http://www.hbe.gov.cn">湖北省教育厅</option>
+</select>
+<script>
+function openlink_select(obj){
+if(obj.value!="")
+{dropNumAjax.urlDropNum(obj.options[obj.selectedIndex].id,obj.options[obj.selectedIndex].djsl);
+window.open(obj.options[obj.selectedIndex].value);
+obj.selectedIndex=0;}
+}
+</script>
+</div></div>
+<div id="contag134259620633373482" class="hd" ><div id="134259618428666931" class="urlportlet_134259618428666931" >
+<h3><span>==校内链接==</span></h3><script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><select onchange="openlink_select(this)"><option  id="134259619408392346" djsl="2" value="#">==校内链接==</option>
+<option  id="137446797342896979" djsl="74" value="http://xb.wust.edu.cn">学校办公室</option>
+<option  id="137448109226472408" djsl="1" value="http://zzb.wust.edu.cn">党委组织部</option>
+<option  id="137448113120110940" djsl="8" value="http://xcb.wust.edu.cn">党委宣传部</option>
+<option  id="137448117051336382" djsl="67" value="http://www.yjsc.wust.edu.cn/index.aspx">研究生院</option>
+<option  id="137448119642569871" djsl="36" value="http://rsc.wust.edu.cn/">人事处</option>
+<option  id="137448121815630498" djsl="139" value="http://cwc.wust.edu.cn/">财务处</option>
+<option  id="137448124216497807" djsl="139" value="http://www.211.wust.edu.cn/">学生工作处</option>
+<option  id="137448127088458258" djsl="8" value="http://sbc.wust.edu.cn/">实验室与设备处</option>
+<option  id="138242534135768606" djsl="5" value="#">虚拟仿真实验教学中心</option>
+<option  id="144670855558769965" djsl="69" value="http://202.114.242.233:8069/default.html">教师教学发展中心</option>
+</select>
+<script>
+function openlink_select(obj){
+if(obj.value!="")
+{dropNumAjax.urlDropNum(obj.options[obj.selectedIndex].id,obj.options[obj.selectedIndex].djsl);
+window.open(obj.options[obj.selectedIndex].value);
+obj.selectedIndex=0;}
+}
+</script>
+</div></div>
+<!--html部分开始-->
+<!--JS部分开始-->
+<script language="javascript">
+var tmp_134259609734819335=0;
+function tag134259609734819335(obj) {
+if (obj.className != "ha") {
+var tags=document.getElementById("tags134259609734819335");
+var len=tags.getElementsByTagName("li").length;
+for(var i=0;i<len;i++){
+tags.getElementsByTagName("li")[i].className="";
+document.getElementById("con"+tags.getElementsByTagName("li")[i].id).className="hd";
+document.getElementById("con"+tags.getElementsByTagName("li")[i].id).style.display="none";
+}
+obj.className = "ha";
+document.getElementById("con"+obj.id).className="sw";
+document.getElementById("con"+obj.id).style.display="";
+}
+else {
+document.getElementById("con"+obj.id).style.display="";
+}
+}
+</script>
+<!--JS部分结束-->
+<!--复合标签控件结束-->
+</div></div>
+	<div id="138390252314427259" class="mainframe_1_5">
+	<div id="138390259195651648" class="picurlportlet_138390259195651648" >
+<h3><span>虚拟</span></h3><ul> 
+<div id="showpages_138390259195651648" >
+</div>
+<div id="showimags_138390259195651648" >
+</div>
+<li><a id="138390267636844903" djsl="21" onclick="openlink(this)" href="http://cs.wust.edu.cn/MPVSlab.htm" target="_blank">	<img  height="43px" width="215px" src="http://202.114.242.231:8036//images/138390267621242472.jpg" alt="null"/></a></li>
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><script type="text/javascript">function openlink(obj){
+dropNumAjax.urlDropNum(obj.id,obj.djsl);
+}
+</script>
+<script type="text/javascript">
+function showFwpl_138390259195651648(obj){
+var url = "fwplb.jsp?FwId="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+<script type="text/javascript">
+function showFwjs_138390259195651648(obj){
+var url = "yzs/fwjs.action?id="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+</ul></div></div>
+	</div>
+	<div id="134259463600544321" class="mainframe_2">
+	<div id="134259464702023707" class="mainframe_2_1">
+	<div id="134259638016186242" class="newslist_134259638016186242" >
+<h3><span>通知公告</span>
+<a href=http://202.114.242.231:8036/type/00580112.html target=_blank>更多...</a></h3>
+<div class="con">
+<ul>
+<li><a href="http://202.114.242.231:8036/news/151730616177057833.html" target="_blank" title=关于办理成绩单和出国相关证明材料盖章的通知>关于办理成绩单和出国相关证明材料盖章的通知</a><span class="time">
+2018-01-30</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151684245731827709.html" target="_blank" title=【考试安排】关于2017-2018-2学期大学英语课程水平考试的通知>【考试安排】关于2017-2018-2学期大学英语课程水平考...</a><span class="time">
+2018-01-25</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151684157184442267.html" target="_blank" title=【考试安排】2017-2018学年第一学期补考安排>【考试安排】2017-2018学年第一学期补考安排</a><span class="time">
+2018-01-25</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151608246258541016.html" target="_blank" title=【排课选课】2017-2018-2学期各项选课安排通知(更新附件2)>【排课选课】2017-2018-2学期各项选课安排通知(更新...</a><span class="time">
+2018-01-16</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151606377216859225.html" target="_blank" title=【考试安排】2017-2018学年度第一学期期末考试安排>【考试安排】2017-2018学年度第一学期期末考试安排</a><span class="time">
+2018-01-16</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151600249993015754.html" target="_blank" title=关于开展2017-2018年度第二学期研究生助教选聘工作的通知>关于开展2017-2018年度第二学期研究生助教选聘工作的通...</a><span class="time">
+2018-01-15</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151574699012669111.html" target="_blank" title=关于做好2018届本科毕业设计（论文）选题工作的通知>关于做好2018届本科毕业设计（论文）选题工作的通知</a><span class="time">
+2018-01-12</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151546270953873656.html" target="_blank" title=【通知公告】关于2017-2018-2学期课表公示的通知>【通知公告】关于2017-2018-2学期课表公示的通知</a><span class="time">
+2018-01-09</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151537554027815690.html" target="_blank" title=【考试安排】17-18-1学期《大学英语(二)、(四)》、《大学英语听说/读写(四)》考试安排>【考试安排】17-18-1学期《大学英语(二)、(四)》、《...</a><span class="time">
+2018-01-08</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151511180353882009.html" target="_blank" title=【考试安排】17-18-1学期《毛泽东思想与中国特色社会主义理论体系概论》考试安排>【考试安排】17-18-1学期《毛泽东思想与中国特色社会主义...</a><span class="time">
+2018-01-05</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/151505034355942575.html" target="_blank" title=【考试安排】17-18-1学期《概率论与数理统计》考试安排>【考试安排】17-18-1学期《概率论与数理统计》考试安排</a><span class="time">
+2018-01-04</span>
+</li>
+</ul></div>
+</div></div>
+	<div id="134259464702047121" class="mainframe_2_2">
+	<div id="134259683741178129" class="newslist_134259683741178129" >
+<h3><span>教育教学动态</span>
+<a href=http://202.114.242.231:8036/type/00580113.html target=_blank>更多...</a></h3>
+<div class="con">
+<ul>
+<li><a href="http://202.114.242.231:8036/news/150528997809799026.html" target="_blank" title=武科大被认定为全国深化创新创业教育改革示范高校>武科大被认定为全国深化创新创业教育改革示范高校</a><span class="time">
+2017-09-13</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/150528989045659533.html" target="_blank" title=简讯：我校在第三届“互联网+”大赛湖北省赛区复赛上获2金3银5铜>简讯：我校在第三届“互联网+”大赛湖北省赛区复赛上获2金3银5...</a><span class="time">
+2017-09-13</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/149511293066091156.html" target="_blank" title=武科大被认定为湖北省首批省级双创示范基地>武科大被认定为湖北省首批省级双创示范基地</a><span class="time">
+2017-05-18</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/149213521035295169.html" target="_blank" title=武科大被认定为湖北省首批省级深化创新创业教育改革示范高校>武科大被认定为湖北省首批省级深化创新创业教育改革示范高校</a><span class="time">
+2017-04-17</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/149026043317653299.html" target="_blank" title=教育厅高等教育处2017年工作要点>教育厅高等教育处2017年工作要点</a><span class="time">
+2017-03-23</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/148893819285067873.html" target="_blank" title=我校教师主编的教材在“全国电子信息类和财经类优秀教材”评选中喜获嘉奖>我校教师主编的教材在“全国电子信息类和财经类优秀教材”评选中喜...</a><span class="pic"></span><span class="time">
+2017-03-08</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/148732408156912767.html" target="_blank" title=教育部2017年工作要点>教育部2017年工作要点</a><span class="time">
+2017-02-17</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/148756017798063905.html" target="_blank" title=我校召开MOOC课程制作入围供应商宣讲会>我校召开MOOC课程制作入围供应商宣讲会</a><span class="pic"></span><span class="time">
+2017-01-16</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/148732132797649110.html" target="_blank" title=我校参加“东西部高校课程共享联盟”2016年年会>我校参加“东西部高校课程共享联盟”2016年年会</a><span class="pic"></span><span class="time">
+2016-12-7 </span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/148047344390256229.html" target="_blank" title=我校学生在全国税务技能大赛中获总决赛团体一等奖>我校学生在全国税务技能大赛中获总决赛团体一等奖</a><span class="time">
+2016-11-22</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/147926267746834530.html" target="_blank" title=我校在2016年湖北省大学生物理实验创新设计竞赛中获佳绩>我校在2016年湖北省大学生物理实验创新设计竞赛中获佳绩</a><span class="time">
+2016-11-16</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/147790375303343740.html" target="_blank" title=我校在2016年湖北省信息技术创新大赛获5个一等奖>我校在2016年湖北省信息技术创新大赛获5个一等奖</a><span class="time">
+2016-10-31</span>
+</li>
+
+<li><a href="http://202.114.242.231:8036/news/147745246401091503.html" target="_blank" title=我校3门课程获全国地方性高校UOOC联盟首届“Uooc&#8226;Star”课程>我校3门课程获全国地方性高校UOOC联盟首届“Uooc&#82...</a><span class="time">
+2016-10-26</span>
+</li>
+</ul></div>
+</div></div>
+	</div>
+	<div id="136624766141761530" class="mainframe_3">
+	<div id="136624766974584555" class="mainframe_3_1">
+	<div id="136626401549583556" class="textdisplay_136626401549583556" >
+<div class="con"><script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var y=today.getFullYear();
+var mo=today.getMonth();
+var d=today.getDate();
+mo+=1;
+document.getElementById('txt').innerHTML=y+"年"+mo+"月"+d+"日"
+}
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+window.onload=startTime;
+</script><script type="text/javascript" src="/js/time1.js"></script><script type="text/javascript" src="/js/time3.js"></script>
+<table cellspacing="0" cellpadding="0" width="222" border="0" style="border-top: #cdcdcf 1px solid; border-right: #cdcdcf 1px solid; border-bottom: #cdcdcf 1px solid; border-left: #cdcdcf 1px solid">
+    <tbody>
+        <tr>
+            <td style="height: 60px; background: url(/images/xiaoli.gif) no-repeat center top">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="font-size: 14px; height: 30px; text-align: center">2012-2013学年第二学期</td>
+        </tr>
+        <tr>
+            <td id="txt" style="font-size: 14px; height: 30px; font-weight: 600; color: #0055cc; text-align: center">&nbsp;</td>
+        </tr>
+        <tr>
+            <td id="spanCalendar"></td>
+        </tr>
+    </tbody>
+</table></div>
+</div></div>
+	<div id="136782598789578105" class="mainframe_3_3">
+	<div id="136782602334898156" class="iframeintegration_136782602334898156" >
+<h3><span>日历iframe</span></h3><p id="p_136782602334898156"> 
+<iframe  name="iframe_136782602334898156" id="iframe_136782602334898156" allowTransparency="true" src="http://portal.wust.edu.cn/xiaoli.html" frameborder="0" marginwidth="0"marginheight="0" scrolling="no" style="height:308px;width:252px"></iframe></p></div></div>
+	<div id="136624766974513322" class="mainframe_3_2">
+	</div>
+	<div id="134259465231786075" class="mainframe_2_4">
+	<div id="134259692731725593" class="picurlportlet_134259692731725593" >
+<h3><span>专题栏目</span></h3><ul> 
+<div id="showpages_134259692731725593" >
+</div>
+<div id="showimags_134259692731725593" >
+</div>
+<li><a id="134259707258386231" djsl="1923" onclick="openlink(this)" href="http://202.114.242.231:8036/type_jxgc/00580117.html" target="_blank">	<img  height="73px" width="222px" src="http://202.114.242.231:8036//images/134259707255216806.gif" alt="null"/></a></li>
+<li><a id="134259711322352323" djsl="1" onclick="openlink(this)" href="http://202.114.242.231:8036/type/0058011801.html" target="_blank">	<img  height="73px" width="222px" src="http://202.114.242.231:8036//images/134259711320833604.gif" alt="null"/></a></li>
+<li><a id="134259861152064882" djsl="14414" onclick="openlink(this)" href="http://kczx.wust.edu.cn" target="_blank">	<img  height="73px" width="222px" src="http://202.114.242.231:8036//images/136695917309329993.gif" alt="课程中心"/></a></li>
+<li><a id="136625400091790217" djsl="1094" onclick="openlink(this)" href="http://202.114.242.231:8036/type/00580120.html" target="_blank">	<img  height="73px" width="222px" src="http://202.114.242.231:8036//images/136679129567871221.jpg" alt="null"/></a></li>
+<li><a id="136625408607338703" djsl="703" onclick="openlink(this)" href="http://202.114.242.231:8036/type/0058010302.html" target="_blank">	<img  height="73px" width="222px" src="http://202.114.242.231:8036//images/136679131577283392.jpg" alt="null"/></a></li>
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><script type="text/javascript">function openlink(obj){
+dropNumAjax.urlDropNum(obj.id,obj.djsl);
+}
+</script>
+<script type="text/javascript">
+function showFwpl_134259692731725593(obj){
+var url = "fwplb.jsp?FwId="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+<script type="text/javascript">
+function showFwjs_134259692731725593(obj){
+var url = "yzs/fwjs.action?id="+obj.id;
+showTopWin(url,800,600,"Y");
+}
+</script>
+</ul></div></div>
+	<div id="134259465536490069" class="mainframe_2_5">
+	</div>
+	</div>
+	</div>
+	<div id="134257602805285224" class="botframe">
+	<div id="134259467302096740" class="botframe_1">
+	<div id="134259877959845939" class="textdisplay_134259877959845939" >
+<div class="con"><p>Copyright  <a target="blank" href="http://www.wust.edu.cn:8016/zfsmp/index.jsp">&copy;</a> 2013 武汉科技大学&middot;教务处　版权所有&nbsp; 地址：武汉青山和平大道947#&nbsp; 邮编：430081 鄂ICP备 030192&nbsp; 设计开发 正方软件</p></div>
+</div></div>
+	<div id="134259467302023518" class="botframe_2">
+	<div id="134259881530263864" class="webDegreeControl_134259881530263864" >
+<script language="javascript" src="http://202.114.242.231:8036/dwr/interface/dropNumAjax.js"></script><h3 id="webDegree">
+	</h3>
+	<script type="text/javascript">
+	dropNumAjax.getCallNum("sumfwl,yfwl,rfwl,zxrs",function(data){
+	if(document.getElementById("webDegree")){
+	document.getElementById("webDegree").innerHTML =data;
+	}
+	})
+	</script>
+	</div></div>
+	</div>
+	<div id="134257602805265654" class="otherframe">
+	</div>
+	</div>
+	</body>
+	
+</html>

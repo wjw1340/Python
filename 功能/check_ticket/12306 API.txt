@@ -1,0 +1,7 @@
+https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=2018-03-02&leftTicketDTO.from_station=AOH&leftTicketDTO.to_station=WCN&purpose_codes=ADULT
+https://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date=2018-03-02&leftTicketDTO.from_station=AOH&leftTicketDTO.to_station=WCN&purpose_codes=0X00
+
+User-Agent:Mozilla/5.0 (Windows NT 10.0; бн) Gecko/20100101 Firefox/56.0
+Referer	:https://kyfw.12306.cn/otn/leftTicket/init
+
+https://kyfw.12306.cn/otn/resources/js/framework/station_name.js?station_version=1.9047
