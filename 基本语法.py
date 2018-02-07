@@ -4,6 +4,7 @@ print('your age is %s' % age)
 age = int(age);
 print('your age is %d' % age)
 print('Pi is %.2f or %.6f' % (3.1415926,3.145926) )
+print( 'Hello, {0}, 成绩提升 {1:.1f}%'.format('小明', 17.125) )
 
 # 数组
 a = [1,2,3]
